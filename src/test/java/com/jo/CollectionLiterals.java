@@ -20,7 +20,7 @@ import static org.junit.Assert.assertThat;
  * Reference: https://downloads.contentful.com/oxjq45e8ilak/2s5MGeyxUYYkKKyyswaO4g/c23bb60468136f8a050124fbb6fd8e4a/CayHorstmann-Java9.pdf
  * Next: Bonus Feature—Pairs
  */
-public class Java9PopQuizTest {
+public class CollectionLiterals {
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
@@ -78,7 +78,7 @@ public class Java9PopQuizTest {
     }
 
     @Test
-    public void create_a_map_of_things_using_the_of_factory_method(){
+    public void create_a_map_of_things_using_the_OF_factory_method(){
         Map<String, String> map = Map.of("fooKey", "fooValue", "barKey", "barValue");
 
         assertThat(map.get("fooKey"), is("fooValue"));
@@ -144,20 +144,11 @@ public class Java9PopQuizTest {
         System.out.println("----------------------------------------------");
     }
 
-    private void zeroArgumentsMethod(){
-
-    }
-
-    private void multipleArgumentsMethod(String e1, String e2, String e3, String e4, String e5){
-
-    }
-
-    private void methodWithVarargsParameter(String... essss){
-
-    }
 
     /**
      * Difference between a couple of ways with which we create lists
+     * - Arrays.asList(...)
+     * - List.of(...) (this one has been newly added to Java9)
      */
 
     @Test
@@ -207,7 +198,6 @@ public class Java9PopQuizTest {
 
     @Test
     public void lists_created_with_List_of_can_not_be_sorted(){
-
         /**
          * Because the returned list is immutable and the List.sort()
          * default method has been overridden to throw a UOE!
@@ -222,6 +212,21 @@ public class Java9PopQuizTest {
 
         // When
         Collections.sort(list);
+    }
+
+    /**
+     * Some helper methods
+     */
+    private void zeroArgumentsMethod(){
+
+    }
+
+    private void multipleArgumentsMethod(String e1, String e2, String e3, String e4, String e5){
+
+    }
+
+    private void methodWithVarargsParameter(String... essss){
+
     }
 
 }
