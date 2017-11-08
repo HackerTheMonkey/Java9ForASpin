@@ -18,7 +18,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * Reference: https://downloads.contentful.com/oxjq45e8ilak/2s5MGeyxUYYkKKyyswaO4g/c23bb60468136f8a050124fbb6fd8e4a/CayHorstmann-Java9.pdf
- * Next: Bonus Feature—Pairs
+ * Next: Bonus Elvis Operator (Almost)
  */
 public class CollectionLiterals {
 
